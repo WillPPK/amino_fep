@@ -1,0 +1,35 @@
+integrator       =  steep 
+dt               =  0.02 
+nsteps           =  5000 
+nstxout          =  0 
+nstvout          =  0
+nstlog           =  100 
+nstxtcout        =  100 
+xtc-precision    =  100 
+rlist            =  1.4 
+rcoulomb         =  1.2 
+epsilon_r        =  15 
+rvdw-switch      =  0.9 
+rvdw             =  1.2 
+tc-grps          =  PROTEIN LIPID SOL_ION  
+tau-t            =  1.0 1.0 1.0
+ref-t            =  323 323 323
+cutoff-scheme = verlet
+coulombtype = cut-off
+vdw-type = cut-off
+
+free_energy = yes
+init_lambda_state        = PATAMON
+delta_lambda = 0        ;; can turn on to grow lambda per timestep
+calc-lambda-neighbors = -1  ; Need -1 for MBAR. 1 is fine for BAR.
+
+; init_lambda_state        0    1    2    3    4    5    6    7    8    9    10   11   12   13   14   15   
+vdw_lambdas              = 0.00 0.00 0.00 0.00 0.00 0.00 0.10 0.20 0.30 0.40 0.50 0.60 0.70 0.80 0.90 1.00
+coul_lambdas             = 0.00 0.10 0.20 0.30 0.40 0.50 0.60 0.70 0.80 0.90 0.95 1.00 1.00 1.00 1.00 1.00 
+
+sc-alpha                 = 0.5     ; LJ
+sc-coul                  = yes      ; means linear interpolation of Coulomb, Yes would soft core Coulomb too.
+sc-power                 = 1     ; only 1 or 2 supported
+sc-sigma                 = 0.3
+nstdhdl                  = 100  ; must be multiple of nstcalcenergy
+
