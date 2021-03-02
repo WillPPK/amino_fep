@@ -1,6 +1,10 @@
 # amino_fep
 This is a collection of files which I used for my previous FEP calculation. A lot of optimisation...
 
+If you ended up using this pipeline of work, please cite:
+
+Pipatpolkai, T., Corey, R.A., Proks, P. et al. Evaluating inositol phospholipid interactions with inward rectifier potassium channels and characterising their role in disease. Commun Chem 3, 147 (2020). https://doi.org/10.1038/s42004-020-00391-0
+
 Amino acids CG-FEP guide/tutorial
 
  
